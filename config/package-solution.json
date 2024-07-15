@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "tailwind-3-client-side-solution",
+    "id": "4c7a6caf-bcf1-4160-8ec2-e49e85276824",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.19.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "tailwind-3 description"
+      },
+      "longDescription": {
+        "default": "tailwind-3 description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "tailwind-3 Feature",
+        "description": "The feature that activates elements of the tailwind-3 solution.",
+        "id": "67f27a6e-328a-4935-aa5a-d1c094650df4",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/tailwind-3.sppkg"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "tailwind-3-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/tailwind3/Tailwind3WebPart.js",
+          "manifest": "./src/webparts/tailwind3/Tailwind3WebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "Tailwind3WebPartStrings": "lib/webparts/tailwind3/loc/{locale}.js",
+    "PropertyControlStrings": "node_modules/@pnp/spfx-property-controls/lib/loc/{locale}.js",
+    "ControlStrings": "node_modules/@pnp/spfx-controls-react/lib/loc/{locale}.js"
+  }
+}
