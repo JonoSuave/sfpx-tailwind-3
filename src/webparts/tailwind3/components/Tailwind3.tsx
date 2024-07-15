@@ -12,7 +12,7 @@ export default class Tailwind3 extends React.Component<ITailwind3Props, {}> {
 		} = this.props;
 
 		return (
-      <section className='overflow-hidden p-1 text-bodyText bg-background font-sans'>
+      <section className='overflow-hidden p-1 text-bodyText bg-transparent font-sans'>
         <div className="text-center">
           <img alt="" src={isDarkTheme ? require('../assets/welcome-dark.png') : require('../assets/welcome-light.png')} className={"w-full max-w-[420px]"} />
           <h2>Well done, {escape(userDisplayName)}!</h2>

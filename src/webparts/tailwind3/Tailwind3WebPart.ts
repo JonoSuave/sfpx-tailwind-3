@@ -18,13 +18,13 @@ export interface ITailwind3WebPartProps {
 }
 
 export enum ThemeCSSVariables {
-  fontFamilyPrimary = "--myWebPart-fontPrimary",
-  colorPrimary = "--myWebPart-primary",
-  background = "--myWebPart-background",
-  primaryBackgroundColorDark = "--myWebPart-colorBackgroundDarkPrimary",
-  bodyText= "--myWebPart-bodyText",
-  link = "--myWebPart-link",
-  linkHover = "--myWebPart-linkHover",
+	fontFamilyPrimary = "--myWebPart-fontPrimary",
+	colorPrimary = "--myWebPart-primary",
+	background = "--myWebPart-background",
+	primaryBackgroundColorDark = "--myWebPart-colorBackgroundDarkPrimary",
+	bodyText = "--myWebPart-bodyText",
+	link = "--myWebPart-link",
+	linkHover = "--myWebPart-linkHover",
 }
 
 export default class Tailwind3WebPart extends BaseClientSideWebPart<ITailwind3WebPartProps> {
@@ -86,8 +86,6 @@ export default class Tailwind3WebPart extends BaseClientSideWebPart<ITailwind3We
 		);
 	}
 
-  
-
 	protected onThemeChanged(currentTheme: IReadonlyTheme | undefined): void {
 		if (!currentTheme) {
 			return;
@@ -97,13 +95,30 @@ export default class Tailwind3WebPart extends BaseClientSideWebPart<ITailwind3We
 		const { semanticColors } = currentTheme;
 
 		if (semanticColors) {
-// Map colors from the theme to CSS variables and therefore to TailwindCSS custom colors so they can be used in classes
-this.domElement.style.setProperty(ThemeCSSVariables.colorPrimary, currentTheme?.palette?.themePrimary || null);
-this.domElement.style.setProperty(ThemeCSSVariables.fontFamilyPrimary, currentTheme?.fonts?.medium?.fontFamily || null);
-this.domElement.style.setProperty(ThemeCSSVariables.bodyText, semanticColors.bodyText || null);
-this.domElement.style.setProperty(ThemeCSSVariables.link, semanticColors.link || null);
-this.domElement.style.setProperty(ThemeCSSVariables.linkHover, semanticColors.linkHovered || null);
-this.domElement.style.setProperty(ThemeCSSVariables.background, semanticColors.bodyBackground || null); 
+			console.log(semanticColors);
+
+			// Map colors from the theme to CSS variables and therefore to TailwindCSS custom colors so they can be used in classes
+			this.domElement.style.setProperty(
+				ThemeCSSVariables.colorPrimary,
+				currentTheme?.palette?.themePrimary || null
+			);
+			this.domElement.style.setProperty(
+				ThemeCSSVariables.fontFamilyPrimary,
+				currentTheme?.fonts?.medium?.fontFamily || null
+			);
+			this.domElement.style.setProperty(
+				ThemeCSSVariables.bodyText,
+				semanticColors.bodyText || null
+			);
+			this.domElement.style.setProperty(ThemeCSSVariables.link, semanticColors.link || null);
+			this.domElement.style.setProperty(
+				ThemeCSSVariables.linkHover,
+				semanticColors.linkHovered || null
+			);
+			this.domElement.style.setProperty(
+				ThemeCSSVariables.background,
+				semanticColors.bodyBackground || null
+			);
 		}
 	}
 
